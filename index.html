@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>الآلة الحاسبة</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="calc">
+    <header class="top">
+      <h1>الحاسبة</h1>
+      <div class="tools">
+        <button class="icon" id="histBtn" aria-label="السجل">🕘</button>
+        <button class="icon" id="themeBtn" aria-label="تبديل الوضع">🌓</button>
+      </div>
+    </header>
+
+    <div class="screen">
+      <div class="expr" id="expr"></div>
+      <div class="cur" id="cur" title="اضغط للنسخ">0</div>
+    </div>
+
+    <div class="sci">
+      <button class="fn" data-a="fn" data-v="sqrt">√</button>
+      <button class="fn" data-a="fn" data-v="square">x²</button>
+      <button class="fn" data-a="op" data-v="^">xʸ</button>
+      <button class="fn" data-a="fn" data-v="inv">1/x</button>
+      <button class="fn" data-a="fn" data-v="pi">π</button>
+    </div>
+
+    <div class="keys" id="keys">
+      <button class="clr" data-a="clear">AC</button>
+      <button class="op" data-a="back">⌫</button>
+      <button class="op" data-a="percent">%</button>
+      <button class="op" data-a="op" data-v="÷">÷</button>
+
+      <button data-a="num" data-v="7">7</button>
+      <button data-a="num" data-v="8">8</button>
+      <button data-a="num" data-v="9">9</button>
+      <button class="op" data-a="op" data-v="×">×</button>
+
+      <button data-a="num" data-v="4">4</button>
+      <button data-a="num" data-v="5">5</button>
+      <button data-a="num" data-v="6">6</button>
+      <button class="op" data-a="op" data-v="−">−</button>
+
+      <button data-a="num" data-v="1">1</button>
+      <button data-a="num" data-v="2">2</button>
+      <button data-a="num" data-v="3">3</button>
+      <button class="op" data-a="op" data-v="+">+</button>
+
+      <button data-a="sign">±</button>
+      <button data-a="num" data-v="0">0</button>
+      <button data-a="dot">.</button>
+      <button class="eq" data-a="eq">=</button>
+    </div>
+
+    <section class="history" id="history" aria-hidden="true">
+      <div class="h-head">
+        <strong>السجل</strong>
+        <div>
+          <button class="small" id="clearHist">مسح الكل</button>
+          <button class="small" id="closeHist">إغلاق</button>
+        </div>
+      </div>
+      <ul id="histList"></ul>
+    </section>
+
+    <div class="toast" id="toast">تم النسخ</div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
